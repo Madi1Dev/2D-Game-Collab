@@ -420,9 +420,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bc980000
-    m_LastClickedID: 39100
-    m_ExpandedIDs: 00000000bc980000be980000c0980000c298000000ca9a3b
+    m_SelectedIDs: c2980000
+    m_LastClickedID: 39106
+    m_ExpandedIDs: 00000000c2980000c4980000c6980000c898000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -451,7 +451,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000bc980000be980000c0980000c2980000
+    m_ExpandedIDs: 00000000c2980000c4980000c6980000c8980000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -599,9 +599,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: bef8ffff
-      m_LastClickedID: -1858
-      m_ExpandedIDs: fcfaffffb8970000
+      m_SelectedIDs: 08f8ffff
+      m_LastClickedID: -2040
+      m_ExpandedIDs: fcfaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -618,7 +618,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 7}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
