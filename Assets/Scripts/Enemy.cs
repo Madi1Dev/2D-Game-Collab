@@ -26,9 +26,9 @@ public class Enemy : Character
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
         IsAggroed = distance <= AggroRange;
-        InRange = distance <= AttackRange;
+        // InRange = distance <= AttackRange;
 
-        HandleTimers();
+        // HandleTimers();
     }
 
     void FixedUpdate()
@@ -38,6 +38,11 @@ public class Enemy : Character
             return;
         }
         else
+        {
+            ChasePlayer();
+            Shoot();
+        }
+        /*
         {
             if (IsShooting)
             {
@@ -56,7 +61,20 @@ public class Enemy : Character
                 }
             }
         }
+        */
     }
+
+    private void ChasePlayer()
+    {
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+        RigidBody.MovePosition(RigidBody.position + direction * MovementSpeed * Time.fixedDeltaTime);
+    }
+
+    private void Shoot()
+    {
+        Debug.Log("Shooting @Player!");
+    }
+
 
     private void HandleTimers()
     {
@@ -77,12 +95,6 @@ public class Enemy : Character
                 FinishReload();
             }
         }
-    }
-
-    private void ChasePlayer()
-    {
-        Vector2 direction = (player.transform.position - transform.position).normalized;
-        RigidBody.MovePosition(RigidBody.position + direction * MovementSpeed * Time.fixedDeltaTime);
     }
 
     private void StartShooting()
