@@ -73,8 +73,17 @@ public class Enemy : Character
     private void Shoot()
     {
         Debug.Log("Shooting @Player!");
+        // 
     }
 
+    // to do: 
+    // 1. power ups (move speed, attack speed)
+    // 2. projectile spawning, they just go forward, no tracking
+    // - they disappear after a certain distance (max range)
+    // 3. player only has one life
+    // - death logic
+    // 4. 
+    // enemies just constantly move and shoot
 
     private void HandleTimers()
     {

@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
+
 public class Player : Character
 {
+    public string Name = "Fresh Beats";
     public InputAction PlayerMovement;
     public InputAction PlayerInteract;
     public InputAction PlayerAttack;
-
+    
     private void OnEnable()
     {
         PlayerMovement.Enable();
@@ -42,8 +42,12 @@ public class Player : Character
 
     private void OnAttack(InputAction.CallbackContext context) // necessary delegate even if not used
     {
-        Debug.Log("Attacking!");
-        GetComponent<Animator>().SetTrigger("Attack"); // doesn't actually do anything because the animator has no attack
+        Shoot();
+    }
+    
+    private void Shoot()
+    {
+        Debug.Log($"{Name} is shooting with {AttackSpeed} attack speed.");
     }
 
     /*
@@ -52,6 +56,22 @@ public class Player : Character
     .canceled: when the button is released
     */
 
+    public void ApplyPowerUp(PowerUp newPowerUp)
+    {
+        PowerUp existing = ActivePowerUps.Find(p => p.GetType() == newPowerUp.GetType());
+        if (existing != null)
+        {
+            ActivePowerUps.RemoveAll(p => p.GetType() == newPowerUp.GetType());
+        }
+
+        if (newPowerUp is AttackSpeedPowerUp newASPowerUp)
+        {
+            AttackSpeed = BaseAttackSpeed;
+            ActivePowerUps.Add(newASPowerUp);
+            AttackSpeed = newASPowerUp.Amount;
+            Debug.Log($"Applying {newASPowerUp.Amount} attack speed to {Name}!");
+        }
+    }
 }
 
 // projectiles

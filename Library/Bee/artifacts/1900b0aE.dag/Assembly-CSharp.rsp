@@ -443,9 +443,11 @@
 "Assets/Cainos/Pixel Art Top Down - Basic/Script/SpriteColorAnimation.cs"
 "Assets/Cainos/Pixel Art Top Down - Basic/Script/StairsLayerTrigger.cs"
 "Assets/Cainos/Pixel Art Top Down - Basic/Script/TopDownCharacterController.cs"
+"Assets/Scripts/AttackSpeedPowerUp.cs"
 "Assets/Scripts/Character.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/PowerUp.cs"
 "Assets/Scripts/Projectile.cs"
 -langversion:9.0
 /deterministic
