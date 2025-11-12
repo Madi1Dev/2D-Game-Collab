@@ -2,20 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-public class Player : MonoBehaviour
+public class Player : Character
 {
-    public float MovementSpeed = 5f;
     public InputAction PlayerMovement;
     public InputAction PlayerInteract;
     public InputAction PlayerAttack;
-    public Rigidbody2D RigidBody { get; private set; }
-    Vector2 MoveDirection = Vector2.zero;
-
-    void Awake()
-    {
-        RigidBody = GetComponent<Rigidbody2D>();
-    }
 
     private void OnEnable()
     {
@@ -62,3 +53,11 @@ public class Player : MonoBehaviour
     */
 
 }
+
+// projectiles
+// player
+// timer?
+// enemies
+// no health - 1 hit = death
+// enemy manager
+// projectile manager
